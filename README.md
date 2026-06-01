@@ -126,22 +126,22 @@ if row['ct_state_ttl'] == 2 and row['dpkts'] == 0:
 Add your rules in the clearly marked section below the four baselines. Each rule is a single `if` statement that returns `True` for a predicted attack:
 
 ```python
-# Example — do not copy this literally, find your own thresholds
-if row['sjit'] > 5000 and row['dpkts'] == 0:
+# Example
+if row['FEATURE'] > VALUE:
     return True
 ```
 
 You can combine multiple conditions:
 
 ```python
-if row['sttl'] == 62 and row['ct_state_ttl'] == 1:
+if row['FEATURE1'] == VALUE1 and row['FEATURE2'] == VALUE2:
     return True
 ```
 
 You can also use arithmetic inside conditions:
 
 ```python
-if row['sbytes'] > row['dbytes'] * 10 and row['dpkts'] > 0:
+if row['FEATURE1'] > row['FEATURE2'] * VALUE1 and row['FEATURE3'] > VALUE2:
     return True
 ```
 
