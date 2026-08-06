@@ -23,7 +23,7 @@ The UNSW-NB15 dataset was created by the Australian Centre for Cyber Security at
 
 ### Your Training File
 
-You are provided with **`UNSW_NB15_training_30k.csv`** which is a balanced subset of 30,000 connection records:
+You are provided with **`UNSW_NB15_training_30k.csv`** in this repository which is a balanced subset of 30,000 connection records:
 
 | Split | Count |
 |-------|-------|
@@ -123,7 +123,7 @@ if row['ct_state_ttl'] == 2 and row['dpkts'] == 0:
 
 ### Writing Your Own Rules
 
-Add your rules in the clearly marked section below the four baselines. Each rule is a single `if` statement that returns `True` for a predicted attack:
+Add your rules in the clearly marked section **below** the four baselines. Each rule is a single `if` statement that returns `True` for a predicted attack:
 
 ```python
 # Example
