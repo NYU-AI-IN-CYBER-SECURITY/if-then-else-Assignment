@@ -107,7 +107,7 @@ You are provided with **`UNSW_NB15_balanced_30k.csv`**, a balanced subset of 30,
 
 The filename matters. The evaluator at the bottom of `ruleBasedDetection.py` looks for `UNSW_NB15_balanced_30k.csv` by exact name and will exit with an error if it cannot find it.
 
-> **Note:** The autograder runs your rules against a separate, unseen dataset drawn from the same source and with the same balance as your training file. Rules that generalise beyond the training data will score better than rules tuned to specific rows.
+> **Note:** The autograder runs your rules against a separate, unseen dataset drawn from the same source, but may not be balanced. Rules that generalise beyond the training data will score better than rules tuned to specific rows.
 
 ### Attack Categories in the Dataset
 
