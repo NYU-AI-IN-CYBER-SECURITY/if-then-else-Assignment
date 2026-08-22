@@ -279,6 +279,8 @@ python ruleBasedDetection.py
 
 Make sure `UNSW_NB15_balanced_30k.csv` is in the same folder. Test as often as you like. Only your Gradescope submission counts for marks.
 
+Keep the file named `ruleBasedDetection.py` while you work, since the evaluator block at the bottom expects to be run that way. Rename it to `<netid>_ite.py` only when you are ready to submit. See [Submission](#submission) for the exact naming rules.
+
 **Explore before you write.** You are allowed to analyse the training CSV however you want, including with pandas, a notebook, Excel, `awk`, superstitious rituals, whatever helps you in your process. The constraints apply only to the rules you submit, not to how you discover them. Students who plot a few feature distributions by label before writing anything consistently outperform students who guess and resubmit. We recommend using your brain on this, so you learn how to look at data and their shape.
 
 ---
@@ -332,8 +334,47 @@ The comparison is more interesting than it first appears. A decision tree is als
 
 ## Submission
 
+### Naming your file
+
+Rename your file before you submit. Gradescope expects exactly:
+
+`<netid>_ite.py`
+
+`<netid>` is your NYU netid, the part of your NYU email address before the `@`. The `ite` stands for *if-then-else*.
+
+| Your NYU email | Your netid | Your filename |
+|---|---|---|
+| `abc1234@nyu.edu` | `abc1234` | `abc1234_ite.py` |
+| `jd987@nyu.edu` | `jd987` | `jd987_ite.py` |
+
+**The filename is checked before anything is graded. If it does not match this pattern, the submission is rejected and no score is recorded.** This is not a style preference. It is how your submission gets attached to you.
+
+Get these right:
+
+- Write your netid in **lowercase**. (The check itself is case-insensitive, so `ABC1234_ITE.py` will not be rejected, but lowercase is the expected form.)
+- Put an **underscore** between your netid and `ite`, not a hyphen, a dot, or a space.
+- The name ends at `.py`. Nothing comes after it.
+- The file must not be empty.
+- Use **your own** netid. Submitting under another student's netid is academic misconduct, and it is checked for.
+
+Names that get rejected:
+
+| Rejected filename | Why it fails |
+|---|---|
+| `ruleBasedDetection.py` | you forgot to rename it |
+| `abc1234-ite.py` | hyphen instead of an underscore |
+| `abc1234ite.py` | missing underscore |
+| `abc1234_ite.txt` | wrong extension |
+| `abc1234_ite.py.txt` | hidden second extension |
+| `abc1234 ite.py` | space instead of an underscore |
+| `assignment1.py` | does not follow the pattern |
+
+> **On Windows**, turn on File Explorer -> View -> File name extensions before renaming. With extensions hidden, a file that displays as `abc1234_ite.py` can actually be `abc1234_ite.py.txt`, and renaming it will not do what you expect.
+
+### What to upload
+
 Upload to the Gradescope assignment:
 
-1. **`ruleBasedDetection.py`** with your rules added. Upload the file itself, not a zip and not the dataset.
+1. **`<netid>_ite.py`**, which is your `ruleBasedDetection.py` with your rules added and renamed as above. Upload the file itself, not a zip and not the dataset.
 
 Autograder results are returned within gradescope. You may resubmit as many times as the assignment allows (read output carefully to find this).
